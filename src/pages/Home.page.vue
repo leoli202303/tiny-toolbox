@@ -8,29 +8,34 @@ import { config } from '@/config';
 
 const toolStore = useToolStore();
 
-useHead({ title: 'IT Tools - Handy online tools for developers' });
+useHead({ title: 'AIO Tools - Free online it tools for developers all-in-one' });
 const { t } = useI18n();
 </script>
 
 <template>
   <div class="pt-50px">
     <div class="grid-wrapper">
-      <div v-if="config.showBanner" class="grid grid-cols-1 gap-12px lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xl:grid-cols-4">
+      <div
+        v-if="config.showBanner"
+        class="grid grid-cols-1 gap-12px lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xl:grid-cols-4"
+      >
         <ColoredCard :title="$t('home.follow.title')" :icon="Heart">
           {{ $t('home.follow.p1') }}
           <a
-            href="https://github.com/CorentinTh/it-tools"
+            href="https://github.com/leoli202303/tiny-toolbox"
             rel="noopener"
             target="_blank"
             :aria-label="$t('home.follow.githubRepository')"
-          >GitHub</a>
+            >GitHub</a
+          >
           {{ $t('home.follow.p2') }}
           <a
-            href="https://twitter.com/ittoolsdottech"
+            href="https://twitter.com/artiversehub"
             rel="noopener"
             target="_blank"
             :aria-label="$t('home.follow.twitterAccount')"
-          >Twitter</a>.
+            >Twitter</a
+          >.
           {{ $t('home.follow.thankYou') }}
           <n-icon :component="Heart" />
         </ColoredCard>
