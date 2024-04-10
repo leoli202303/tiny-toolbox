@@ -13,8 +13,6 @@ import App from './App.vue';
 import router from './router';
 import { i18nPlugin } from './plugins/i18n.plugin';
 
-import VueAnalytics from 'vue-analytics';
-
 registerSW();
 
 const app = createApp(App);
@@ -27,8 +25,3 @@ app.use(naive);
 app.use(plausible);
 
 app.mount('#app');
-
-app.use(VueAnalytics, {
-  id: 'G-DXEFXC39F5', // 替换为你的Google Analytics跟踪ID
-  router,
-});
