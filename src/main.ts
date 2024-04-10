@@ -12,6 +12,16 @@ import { naive } from './plugins/naive.plugin';
 import App from './App.vue';
 import router from './router';
 import { i18nPlugin } from './plugins/i18n.plugin';
+import Vue from 'vue';
+import VueAnalytics from 'vue-analytics';
+
+// 导入你的路由器实例
+// import router from './router';
+
+Vue.use(VueAnalytics, {
+  id: 'G-DXEFXC39F5', // 替换为你的Google Analytics跟踪ID
+  router,
+});
 
 registerSW();
 
